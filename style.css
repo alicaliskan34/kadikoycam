@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.2s ease;
+}
+
+
+/* NAVBAR  */
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px solid #E5E5E5;
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    justify-content: space-around;
+    overflow: hidden;
+
+}
+
+.logo {
+    height: 60px;
+    cursor: pointer;
+}
+
+.menu-items {
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.menu-items:hover {
+    color: #B13636;
+}
+
+.content {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.slider {
+    display: block;
+    width: 100%;
+    max-width: 980px;
+    height: 370px;
+    border-radius: 10px;
+    background-color: grey;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    /* İçeriği yatay olarak sırala */
+    overflow-x: auto;
+    /* İçeriği yatay olarak kaydır */
+    scroll-behavior: smooth;
+    /* Kaydırmayı düzgünleştir */
+    transition: all 0.5s ease;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.slider-item {
+    flex: 0 0 auto;
+    /* Esneklik özelliğini ayarla */
+    width: 100%;
+    /* Slider'ı tamamen kapla */
+    height: auto;
+    /* Yüksekliği otomatik olarak ayarla */
+}
+
+.sliderSettings {
+    display: flex;
+}
+
+.sliderSetting {
+    margin-right: 10px;
+    font-size: 50px;
+    color: #CCCCCC;
+    -webkit-user-select: none;
+    /* Safari ve Chrome */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer */
+    user-select: none;
+    cursor: pointer;
+    /* Tıklanabilir olduğunu göstermek için */
+}
+
+.sliderActive {
+    color: #000;
+}
+
+p {
+    text-align: center;
+}
+
+.baslik {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    color: #B13636;
+    text-align: center;
+}
+
+.call {
+    color: #B13636;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.number {
+    text-decoration: none;
+    color: #B13636;
+}
+
+
+.squareContent {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.square {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
+
+
+.squareImg {
+    margin-bottom: 1rem;
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.squareImg:hover {
+    transform: scale(1.1);
+}
+
+
+.squareText {
+    font-weight: bolder;
+}
+
+.down {
+    width: 100%;
+    margin: auto;
+    background-color: #21252F;
+    display: flex;
+}
+
+.downContent {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.squareDown {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 200px;
+    margin-bottom: 1rem;
+}
+
+.menulinks {
+    color: white;
+    font-weight: bold;
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid;
+}
+
+.menulink {
+    color: white;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.menulink:hover {
+    color: #B13636;
+}
+
+.menuu {
+    display: none;
+}
+
+.rmenu {
+    position: absolute;
+    top: -500px;
+    z-index: 9999;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 0.2s linear;
+    margin-top: 1rem;
+    opacity: 0;
+}
+
+.active {
+    position: relative;
+    display: block;
+    top: 0;
+    opacity: 1;
+}
+
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 920px) {
+
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .menu-items {
+        display: none;
+    }
+
+    .menuu {
+        display: block;
+    }
+
+    .rmenuitems {
+        display: block;
+        margin-top: 0.1rem;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+
+    .downContent {
+        width: 80%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+}
+
+
